@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Película</title>
+    <link rel="stylesheet" href="/css/style_ver-pelicula.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <h2 class="logo">PelisNur</h2>
+            <ul class="nav">
+                <li><a href="/index">Inicio</a></li>
+                <li><a href="/seccion-peliculas">Películas</a></li>
+                <li><a href="/seccion-series">Series</a></li>
+                <li><a href="/">Salir <i class="fas fa-sign-out-alt"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="pelicula contenedor">
+        <h2 class="titulo"><%= pelicula.titulo %> </h2>
+        <div class="grid">
+            <img src="<%= pelicula.poster %> " alt="">
+            <p class="description"><%= pelicula.descripcion %> </p>
+        </div>
+        <div class="trailer">
+            <h2>Película</h2>
+            <br> 
+            <iframe width="560" height="315" src="<%= pelicula.trailer %> " frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>© 2020, PelisNur, Inc. o afiliados</p>
+        </div>
+    </footer>
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-replace-svg="nest"></script>
+
+</body>
+
+</html>

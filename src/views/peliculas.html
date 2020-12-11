@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_peliculas.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <h2 class="logo">PelisNur</h2>
+            <ul class="nav">
+                <li><a href="/index">Inicio</a></li>
+                <li><a href="/seccion-peliculas">Películas</a></li>
+                <li><a href="/seccion-series">Series</a></li>
+                <li><a href="/">Salir <i class="fas fa-sign-out-alt"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="recomendadas contenedor">
+        <div class="titulo">
+            <h3>Todas las películas</h3>
+        </div>
+
+        <div class="contenedor_principal">
+            <button type="button" class="flecha_izquierda" id="flecha_izquierda"><i
+                    class="fas fa-angle-left"></i></button>
+            <div class="contenedor_carrousel" id="contenedor_carrousel">
+                <% for( let index = 0; index < listapeliculas.length; index++ ) { %>
+                <div class="pelicula">
+                    <a href="/detalle-pelicula/<%= listapeliculas[index].pelicula_id %> "><img
+                            src="<%= listapeliculas[index].poster%> " alt=""></a>
+                    <div><%= listapeliculas[index].titulo %> </div>
+                </div>
+                <% } %>
+            </div>
+            <button type="button" class="flecha_derecha" id="flecha_derecha"><i class="fas fa-angle-right"></i></button>
+        </div>
+    </div>
+    <br>
+    <div class="recomendadas contenedor">
+        <div class="titulo">
+            <h3>Acción</h3>
+        </div>
+
+        <div class="contenedor_principal">
+            <button type="button" class="flecha_izquierda" id="flecha_izquierda2"><i
+                    class="fas fa-angle-left"></i></button>
+            <div class="contenedor_carrousel" id="contenedor_carrousel2">
+                <% for( let index = 0; index < listaaccion.length; index++ ) { %>
+                <div class="pelicula">
+                    <a href="/detalle-pelicula/<%= listaaccion[index].pelicula_id %> "><img
+                            src="<%= listaaccion[index].poster%> " alt=""></a>
+                    <div><%= listaaccion[index].titulo %> </div>
+                </div>
+                <% } %>
+            </div>
+            <button type="button" class="flecha_derecha" id="flecha_derecha2"><i class="fas fa-angle-right"></i></button>
+        </div>
+
+    </div>
+    <br>
+    <div class="recomendadas contenedor">
+        <div class="titulo">
+            <h3>Comedia</h3>
+        </div>
+
+        <div class="contenedor_principal">
+            <button type="button" class="flecha_izquierda" id="flecha_izquierda3"><i
+                    class="fas fa-angle-left"></i></button>
+            <div class="contenedor_carrousel" id="contenedor_carrousel3">
+                <% for( let index = 0; index < listacomedia.length; index++ ) { %>
+                <div class="pelicula">
+                    <a href="/detalle-pelicula/<%= listacomedia[index].pelicula_id %> "><img
+                            src="<%= listacomedia[index].poster%> " alt=""></a>
+                    <div><%= listacomedia[index].titulo %> </div>
+                </div>
+                <% } %>
+            </div>
+            <button type="button" class="flecha_derecha" id="flecha_derecha3"><i class="fas fa-angle-right"></i></button>
+        </div>
+
+    </div>
+    <br>
+    <div class="recomendadas contenedor">
+        <div class="titulo">
+            <h3>Ciencia Ficción</h3>
+        </div>
+
+        <div class="contenedor_principal">
+            <button type="button" class="flecha_izquierda" id="flecha_izquierda4"><i
+                    class="fas fa-angle-left"></i></button>
+            <div class="contenedor_carrousel" id="contenedor_carrousel4">
+                <% for( let index = 0; index < listacienciaficcion.length; index++ ) { %>
+                <div class="pelicula">
+                    <a href="/detalle-pelicula/<%= listacienciaficcion[index].pelicula_id %> "><img
+                            src="<%= listacienciaficcion[index].poster%> " alt=""></a>
+                    <div><%= listacienciaficcion[index].titulo %> </div>
+                </div>
+                <% } %>
+            </div>
+            <button type="button" class="flecha_derecha" id="flecha_derecha4"><i class="fas fa-angle-right"></i></button>
+        </div>
+
+    </div>
+    <br>
+    <div class="recomendadas contenedor">
+        <div class="titulo">
+            <h3>Animación</h3>
+        </div>
+
+        <div class="contenedor_principal">
+            <button type="button" class="flecha_izquierda" id="flecha_izquierda5"><i
+                    class="fas fa-angle-left"></i></button>
+            <div class="contenedor_carrousel" id="contenedor_carrousel5">
+                <% for( let index = 0; index < listaanimacion.length; index++ ) { %>
+                <div class="pelicula">
+                    <a href="/detalle-pelicula/<%= listaanimacion[index].pelicula_id %> "><img
+                            src="<%= listaanimacion[index].poster%> " alt=""></a>
+                    <div><%= listaanimacion[index].titulo %> </div>
+                </div>
+                <% } %>
+            </div>
+            <button type="button" class="flecha_derecha" id="flecha_derecha5"><i class="fas fa-angle-right"></i></button>
+        </div>
+
+    </div>
+    </div>
+    <footer>
+        <div>
+            <p>© 2020, PelisNur, Inc. o afiliados</p>
+        </div>
+    </footer>
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-replace-svg="nest"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

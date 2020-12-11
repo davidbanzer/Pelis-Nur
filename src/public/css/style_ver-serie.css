@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* HEADER */
+
+header {
+    padding: 0.5625em 0;
+}
+
+body {
+    background-color: #0F0C13;
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+header .contenedor {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: goldenrod;
+    font-size: 1.87em;
+}
+.nav {
+    list-style-type: none;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: lightgrey;
+    margin-left: 1em;
+    font-size: 0.875em;
+}
+
+.nav li a[href="/seccion-series"] {
+    color: goldenrod;
+}
+
+.nav li a:hover {
+    color: white;
+}
+.serie{
+    color: white;
+    margin-bottom: 20px;
+}
+.titulo{
+    margin: 1.25rem 0rem;
+    color: goldenrod;
+}
+.description{
+    margin: 1.25rem 0rem;
+}
+iframe{
+    width: 100%;
+}
+.trailer{
+    color: white;
+    width: 100%;
+}
+
+.trailer p{
+    margin-bottom: 0.625rem;
+    font-size: 1rem;
+}
+.trailer h3{
+    color: goldenrod;
+}
+h2{
+    color: goldenrod;
+}
+img{
+    width: 50%;
+    vertical-align: top;
+    object-fit: cover;
+}
+footer {
+    padding: 1.25em 0em;
+}
+h4 a{
+    color: goldenrod;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 0.625em;
+}
+/* RESPONSIVE */
+@media (min-width:768px) {
+    body {
+        font-size: 18px;
+    }
+    header .contenedor {
+        flex-direction: row;
+    }
+    .grid{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.25rem;
+    }
+    img{
+        width: 20%;
+        margin-right: 0.9375rem;
+    }
+    iframe{
+        height: 25rem;
+    }
+}
+
+@media (min-width:1024px) {
+    body {
+        font-size: 22px;
+    }
+    header .contenedor {
+        flex-direction: row;
+    }
+    iframe{
+        height: 40rem;
+    }
+}

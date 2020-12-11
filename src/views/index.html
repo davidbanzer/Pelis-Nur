@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <title>PelisNur</title>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <h2 class="logo">PelisNur</h2>
+            <ul class="nav">
+                <li><a href="/index">Inicio</a></li>
+                <li><a href="/seccion-peliculas">Películas</a></li>
+                <li><a href="/seccion-series">Series</a></li>
+                <li><a href="/">Salir <i class="fas fa-sign-out-alt"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="pelicula_principal">
+            <div class="contenedor">
+                <h3 class="titutlo"><%= listapeliculas[0].titulo %></h3>
+                <p>
+                    <%= listapeliculas[0].descripcion %> 
+                </p>
+                <button role="button" class="button"><a href="/detalle-pelicula/<%= listapeliculas[0].pelicula_id %>"><i class="fas fa-play"></i>Ver Película</a></button>
+            </div>
+        </div>
+        <div class="recomendadas contenedor">
+            <div class="titulo">
+                <h3>Películas Recomendadas</h3>
+            </div>
+
+            <div class="contenedor_principal">
+                <button type="button" class="flecha_izquierda" id="flecha_izquierda" ><i class="fas fa-angle-left"></i></button>
+                <div class="contenedor_carrousel" id="contenedor_carrousel">
+
+
+                    <% for( let index = 0; index < listapeliculas.length; index++ ) { %>
+                        <div class="pelicula">
+                            <a href="/detalle-pelicula/<%= listapeliculas[index].pelicula_id %> "><img src="<%= listapeliculas[index].poster%> " alt=""></a>
+                            <div><%= listapeliculas[index].titulo %> </div>
+                        </div>
+                    <% } %>  
+
+                    
+                </div>
+                <button type="button" class="flecha_derecha" id="flecha_derecha"><i class="fas fa-angle-right" ></i></button>
+            </div>
+        </div>
+        <div class="recomendadas contenedor">
+            <div class="titulo">
+                <h3>Series Recomendadas</h3>
+            </div>
+
+            <div class="contenedor_principal">
+                <button type="button" class="flecha_izquierda" id="flecha_izquierda2" ><i class="fas fa-angle-left"></i></button>
+                <div class="contenedor_carrousel" id="contenedor_carrousel2">
+
+
+                    <% for( let index = 0; index < listaseries.length; index++ ) { %>
+                        <div class="pelicula">
+                            <a href="/detalle-serie/<%= listaseries[index].serie_id %>"><img src="<%= listaseries[index].poster%> " alt=""></a>
+                            <div><%= listaseries[index].titulo %> </div>
+                        </div>
+                    <% } %>  
+
+                    
+                </div>
+                <button type="button" class="flecha_derecha" id="flecha_derecha2" ><i class="fas fa-angle-right"></i></button>
+            </div>
+        </div>
+    </main>
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-replace-svg="nest"></script>
+    <script src="../js/main.js"></script>
+    <footer>
+        <div>
+            <p>© 2020, PelisNur, Inc. o afiliados</p>
+        </div>
+    </footer>
+</body>
+
+</html>

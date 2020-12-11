@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serie</title>
+    <link rel="stylesheet" href="/css/style_ver-serie.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <h2 class="logo">PelisNur</h2>
+            <ul class="nav">
+                <li><a href="/index">Inicio</a></li>
+                <li><a href="/seccion-peliculas">Películas</a></li>
+                <li><a href="/seccion-series">Series</a></li>
+                <li><a href="/">Salir <i class="fas fa-sign-out-alt"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="serie contenedor">
+        <h2 class="titulo"><%= serie.titulo %> </h2>
+        <div class="grid">
+            <img src="<%= serie.poster %> " alt="">
+            <p class="description"><%= serie.descripcion %> </p>
+        </div>
+        <h2>Episodios</h2>
+        <% for( let index = 0; index < episodios.length; index++ ) { %>
+            <div class="trailer">
+                <br>
+                <h3><%= index+1 %> - <%=episodios[index].nombre%> </h3>
+                <p><%= episodios[index].descripcion %> </p>
+                <img src="<%= episodios[index].video %> " alt=""><br>
+                <h4> <a href="/detalle-episodio/<%= episodios[index].episodio_id %> "> Ver Episodio</a></h4>
+
+            </div>
+        <% } %>  
+    </div>
+    <footer>
+        <div>
+            <p>© 2020, PelisNur, Inc. o afiliados</p>
+        </div>
+    </footer>
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-replace-svg="nest"></script>
+    <script>
+        
+    </script>
+</body>
+
+</html>

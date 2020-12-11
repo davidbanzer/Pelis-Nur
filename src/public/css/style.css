@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+header {
+    padding: 0.5625em 0;
+}
+
+body {
+    background-color: #0F0C13;
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+header .contenedor {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: goldenrod;
+    font-size: 1.87em;
+}
+
+.nav {
+    list-style-type: none;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: lightgrey;
+    margin-left: 1em;
+    font-size: 0.875em;
+}
+
+.nav li a[href="/index"] {
+    color: goldenrod;
+}
+
+.nav li a:hover {
+    color: white;
+}
+
+/* BANNER PELICULA PRINCIPAL */
+
+.pelicula_principal {
+    font-size: 1em;
+    color: #FFF;
+    min-height: 18.62em;
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url('https://image.tmdb.org/t/p/original/wzJRB4MKi3yK138bJyuL9nx47y6.jpg');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1.25rem;
+}
+
+#info {
+    margin-left: 1.25em;
+}
+
+.pelicula_principal .contenedor {
+    margin: 0 auto;
+    margin-bottom: 3.75em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+}
+
+.pelicula_principal .contenedor h3 {
+    margin-bottom: 0.75em;
+}
+
+.pelicula_principal .contenedor p {
+    font-size: 0.8125em;
+    margin-bottom: 0.75em;
+}
+
+.pelicula_principal .contenedor .button {
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    border-radius: 0.31em;
+    color: #FFF;
+    font-size: 0.75em;
+    padding: 0.625em 0.9375em;
+}
+.pelicula_principal .contenedor .button a{
+    text-decoration: none;
+    color: white;
+}
+
+.pelicula_principal .contenedor .button i {
+    margin-right: 0.5em;
+}
+
+.pelicula_principal .contenedor .button:hover {
+    background-color: white;
+    color: black;
+}
+
+.titulo {
+    font-family: 'Open Sans', sans-serif;
+    color: goldenrod;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+/* PELICULAS Y SERIES RECOMENDADAS */
+
+.pelicula div {
+    color: white;
+    text-align: center;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 0.75em;
+    padding: 0.625em 0em 0em 0em;
+}
+
+.flecha_izquierda, .flecha_derecha {
+    display: none;
+}
+
+.recomendadas {
+    margin-top: 1em;
+}
+
+.recomendadas .contenedor_carrousel {
+    margin-top: 1.25em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25em;
+}
+
+.recomendadas .contenedor_carrousel .pelicula img {
+    width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+/* footer */
+
+footer {
+    padding: 1.25em 0em;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 0.625em;
+}
+
+/* RESPONSIVE DESIGN*/
+
+@media (min-width:768px) {
+    body {
+        font-size: 18px;
+    }
+    header .contenedor {
+        flex-direction: row;
+    }
+    .pelicula_principal .contenedor p {
+        width: 50%;
+    }
+    .pelicula div {
+        display: none;
+    }
+    .recomendadas .contenedor_principal {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .flecha_izquierda, .flecha_derecha {
+        display: block;
+        position: absolute;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.3);
+        font-size: 40px;
+        height: 40%;
+        top: calc(67% - 25%);
+        width: 40px;
+        color: goldenrod;
+        z-index: 500;
+    }
+    .flecha_derecha {
+        right: 0;
+    }
+    .flecha_izquierda {
+        left: 0;
+    }
+    .recomendadas .contenedor_carrousel {
+        gap: 0px;
+        width: 100%;
+        scroll-behavior: smooth;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .recomendadas .contenedor_carrousel .pelicula {
+        min-width: 20%;
+    }
+
+}
+
+@media (min-width:1024px) {
+    body {
+        font-size: 22px;
+    }
+    .pelicula_principal {
+        min-height: 22em;
+    }
+}

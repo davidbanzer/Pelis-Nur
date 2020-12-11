@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+header {
+    padding: 0.5625em 0;
+}
+
+body {
+    background-color: #0F0C13;
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+header .contenedor {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: goldenrod;
+    font-size: 1.87em;
+}
+
+.nav {
+    list-style-type: none;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: lightgrey;
+    margin-left: 1em;
+    font-size: 0.875em;
+}
+
+.nav li a:hover {
+    color: white;
+}
+.nav li a[href="/seccion-series"]{
+    color: goldenrod;
+}
+.nav li a[href="/seccion-peliculas"]{
+    color: lightgrey;
+}
+.nav li a[href="/index"]{
+    color: lightgrey;
+}
+/* BODY */
+.title {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.75em 0em;
+    width: 100%;
+    background-color: #1F1B25;
+}
+
+.title h2 {
+    color: goldenrod;
+    font-size: 1.125em;
+    padding: 0em 0em;
+}
+/* SERIES */
+
+
+/* RESPONSIVE */
+
+@media (min-width:768px){
+    body {
+        font-size: 18px;
+        
+    }
+    .title {
+        background-color: #0F0C13;
+        padding: 0px;
+    }
+    header .contenedor {
+        flex-direction: row;
+    }
+
+}
+@media (min-width:1024px){
+    body {
+        font-size: 22px;
+    }
+}
